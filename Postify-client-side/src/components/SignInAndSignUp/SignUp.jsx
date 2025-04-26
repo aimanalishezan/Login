@@ -152,14 +152,12 @@ function SignUp() {
 
         {/* Right Side: Information Section */}
         <div className="lg:w-1/2 w-full p-10 bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
-          <h2 className="text-4xl font-bold mb-4">Join Postify Today!</h2>
+          <h2 className="text-4xl font-bold mb-4">Join Man.Ai Today!</h2>
           <p className="text-lg mb-6">
-            Create an account to manage and share your posts effortlessly. Get
-            started with Postify now and make your posts stand out!
+            Create an account to access a world of possibilities. With our Ai Agent And Make your life easier.
           </p>
           <p className="text-sm text-teal-200">
-            Sign up now and take the first step towards efficient post
-            management.
+            Sign up now and take the first step towards Agentic Ai 
           </p>
         </div>
       </div>
