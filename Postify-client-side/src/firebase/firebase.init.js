@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyAC1B0sQVK42lIUIZAPNFQ8o66Hqg6zJyg",
-  authDomain: "my-agent-c447e.firebaseapp.com",
+  // authDomain: "my-agent-c447e.firebaseapp.com",
+  authDomain: "https://login-o6ly.vercel.app/",
   projectId: "my-agent-c447e",
   storageBucket: "my-agent-c447e.firebasestorage.app",
   messagingSenderId: "928977829564",
