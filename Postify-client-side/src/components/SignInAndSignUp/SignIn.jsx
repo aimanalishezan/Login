@@ -21,7 +21,7 @@ function SignIn() {
     signInUser(email, password)
       .then(() => {
         console.log("Successfully Signed In!");
-        navigate("/profile");
+        navigate("/Chatbubble");
       })
       .catch((err) => {
         if (
@@ -39,7 +39,7 @@ function SignIn() {
   const hundleGoogleSingIn = () => {
     handleGoogleAuth()
       .then(() => {
-        navigate(`/profile`);
+        navigate(`/Chatbubble`);
       })
       .catch((error) => {
         console.error(error);

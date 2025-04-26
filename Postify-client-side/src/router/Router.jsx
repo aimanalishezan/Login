@@ -3,9 +3,9 @@ import Layout from "../layout/Layout";
 import Home from "./../components/Home/Home";
 import SignUp from "../components/SignInAndSignUp/SignUp";
 import SignIn from "../components/SignInAndSignUp/SignIn";
-import Profile from "./../components/Profile/Profile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UserHome from './../UserHome/UserHome';
+import Chatbubble from "../components/Chat/Chatbubble";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,23 +26,12 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/profile",
-        element: (
-          <PrivateRoute>
-            <Profile></Profile>
-          </PrivateRoute>
-        ),
+        path: "/Chatbubble",
+        element: <Chatbubble></Chatbubble>,
       },
       
-      {
-        path: "/userHome",
-        element: (
-          <PrivateRoute>
-            <UserHome></UserHome>
-          </PrivateRoute>
-        ),
-      },
     ],
+
   },
 ]);
 

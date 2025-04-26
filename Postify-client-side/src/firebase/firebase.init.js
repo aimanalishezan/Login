@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
 const firebaseConfig = {
   apiKey: "AIzaSyAC1B0sQVK42lIUIZAPNFQ8o66Hqg6zJyg",
   authDomain: "my-agent-c447e.firebaseapp.com",
@@ -12,6 +11,18 @@ const firebaseConfig = {
   measurementId: "G-F0QMMMN5HZ"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const auth = getAuth(app);
+// import { initializeApp } from "firebase/app";
+// import { getAuth } from "firebase/auth";
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD2MyJ8pvLluHp-odQlWt7JF-SvgMvorzs",
+//   authDomain: "postify-e46c4.firebaseapp.com",
+//   projectId: "postify-e46c4",
+//   storageBucket: "postify-e46c4.firebasestorage.app",
+//   messagingSenderId: "818833252022",
+//   appId: "1:818833252022:web:ad4cdd2eade0bd217c9017"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);

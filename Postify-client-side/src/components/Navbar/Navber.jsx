@@ -4,6 +4,7 @@ import { useContext } from "react";
 
 function Navber() {
   const { signOutUser, user } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleSignOut = () => {
@@ -14,68 +15,12 @@ function Navber() {
       .catch((error) => console.log(error));
   };
 
-  const navLinks = (
-    <>
-      {user && (
-        <>
-          <li>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                `hover:text-blue-400 ${
-                  isActive ? "text-blue-400 font-bold" : "text-gray-400"
-                }`
-              }
-            >
-              Profile
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/userHome"
-              className={({ isActive }) =>
-                `hover:text-blue-400 ${
-                  isActive ? "text-blue-400 font-bold" : "text-gray-400"
-                }`
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/video"
-              className={({ isActive }) =>
-                `hover:text-blue-400 ${
-                  isActive ? "text-blue-400 font-bold" : "text-gray-400"
-                }`
-              }
-            >
-              Video
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/notification"
-              className={({ isActive }) =>
-                `hover:text-blue-400 ${
-                  isActive ? "text-blue-400 font-bold" : "text-gray-400"
-                }`
-              }
-            >
-              Notification
-            </NavLink>
-          </li>
-        </>
-      )}
-    </>
-  );
 
   return (
     <div className="py-4 navbar px-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white shadow-lg">
       {/* Left Side */}
       <div className="navbar-start">
-        <div className="dropdown">
+        {user && (        <div className="dropdown">
           <button
             tabIndex={0}
             className="btn btn-ghost lg:hidden text-white"
@@ -100,9 +45,16 @@ function Navber() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-gray-800 text-gray-400 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            {navLinks}
+         <li>
+         <Link
+          to="/"
+          className="btn btn-ghost normal-case text-2xl text-blue-500 font-bold"
+        >
+        Chatbubble
+        </Link>
+          </li> 
           </ul>
-        </div>
+        </div>)}
         <Link
           to="/"
           className="btn btn-ghost normal-case text-2xl text-blue-500 font-bold"
@@ -113,11 +65,29 @@ function Navber() {
 
       {/* Center: Navbar Links */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">{navLinks}</ul>
+
       </div>
 
       {/* Right Side */}
       <div className="navbar-end">
+      <div className="flex flex-col items-center space-y-4 mx-4">
+              {/* Profile Picture */}
+              <div /> 
+              {user && (
+                  user?.photoURL? <img src={user.photoURL} alt="Profile" className="w-12 h-12 rounded-full" /> : <img src="https://chatgpt.com.br/wp-content/uploads/2023/03/bing-image-creator-1024x1024.jpg" alt="Profile" className="w-12 h-12 rounded-full" />
+                )}
+
+
+              {/* User Details */}
+              {/* <div className="text-center">
+                <p className="text-lg text-gray-800">
+                  <strong>Name:</strong> {user.displayName || "N/A"}
+                </p>
+                <p className="text-lg text-gray-800">
+                  <strong>Email:</strong> {user.email || "N/A"}
+                </p>
+              </div> */}
+            </div>
         {user ? (
           <button
             onClick={handleSignOut}

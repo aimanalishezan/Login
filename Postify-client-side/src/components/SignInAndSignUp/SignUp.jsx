@@ -12,10 +12,10 @@ function SignUp() {
 
   const handleRegister = (event) => {
     event.preventDefault();
-    const name = event.target.name.value.trim();
+    // const name = event.target.name.value.trim();
     const email = event.target.email.value.trim();
     const password = event.target.password.value;
-    const photo = event.target.photo.value.trim();
+    // const photo = event.target.photo.value.trim();
 
     if (!validateEmail(email)) {
       alert("Invalid email address!");
@@ -30,7 +30,7 @@ function SignUp() {
     createUser(email, password)
       .then((res) => {
         console.log("Successfully Signed Up!");
-        navigate(`/profile`);
+        navigate(`/Chatbubble`);
       })
       .catch((err) => {
         switch (err.code) {
@@ -51,7 +51,7 @@ function SignUp() {
     handleGoogleAuth()
       .then((res) => {
         console.log(res.user);
-        navigate(`/profile`);
+        navigate(`/Chatbubble`);
       })
       .catch((error) => {
         console.error(error);
@@ -66,7 +66,7 @@ function SignUp() {
           <form onSubmit={handleRegister} className="space-y-6">
             <h1 className="text-2xl font-bold text-gray-800">Sign Up</h1>
             {/* Name Field */}
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <label className="text-gray-600">User Name</label>
               <input
                 type="text"
@@ -75,9 +75,9 @@ function SignUp() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
                 required
               />
-            </div>
+            </div> */}
             {/* Photo URL Field */}
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <label className="text-gray-600">Photo URL</label>
               <input
                 type="text"
@@ -85,7 +85,7 @@ function SignUp() {
                 placeholder="Enter your photo URL"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
               />
-            </div>
+            </div> */}
             {/* Email Field */}
             <div className="space-y-2">
               <label className="text-gray-600">Email</label>
