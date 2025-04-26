@@ -6,7 +6,7 @@ function Layout() {
         <div>
             <Navber></Navber>
             <Outlet />
-            this is a main layout components 
+        
         </div>
     )
 }

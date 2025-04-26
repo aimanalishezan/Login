@@ -59,7 +59,7 @@ function Navber() {
           to="/"
           className="btn btn-ghost normal-case text-2xl text-blue-500 font-bold"
         >
-          Postify
+          Man.Ai
         </Link>
       </div>
 
